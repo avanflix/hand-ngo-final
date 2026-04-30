@@ -117,7 +117,7 @@ export default function PrivacyPolicy() {
                   <li><strong>Portability:</strong> Request transfer of your data</li>
                   <li><strong>Opt-out:</strong> Unsubscribe from marketing communications</li>
                 </ul>
-                <p>To exercise these rights, please contact us at contact@hand.org.in</p>
+                <p>To exercise these rights, please contact us at contact@handngo.org</p>
               </div>
             </div>
             <hr className="border-gray-200 mb-8" />

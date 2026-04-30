@@ -200,7 +200,7 @@ export default function JoinUsSection() {
               </button>
 
               <p className="text-xs text-gray-600 text-center mt-3">
-                Contact us at contact@hand.org.in for more information
+                Contact us at contact@handngo.org for more information
               </p>
             </div>
           </div>
