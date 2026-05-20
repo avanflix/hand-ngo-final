@@ -38,11 +38,11 @@ export default function StatsSection() {
   useEffect(() => {
     if (isVisible) {
       const targets = {
-        stat1: 300000,
-        stat2: 10000,
-        stat3: 100000,
-        stat4: 100,
-        stat5: 50
+        stat1: 10000,
+        stat2: 12000,
+        // stat3: 100000,
+        // stat4: 100,
+        // stat5: 50
       }
 
       const duration = 2000 // 2 seconds
@@ -73,8 +73,8 @@ export default function StatsSection() {
   const stats = [
     {
       id: 'stat1',
-      number: '300000+',
-      label: 'People Benefited',
+      number: '10000+',
+      label: 'Live Impacted',
       description: 'Direct beneficiaries through our integrated development programs',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -85,52 +85,63 @@ export default function StatsSection() {
     },
     {
       id: 'stat2',
-      number: '10000+',
-      label: 'Students Supported',
-      description: 'Providing quality education and resources to rural children',
+      number: '12000+',
+      label: 'Awareness',
+      description: 'Creating awareness on climate change, sustainable practices, and community resilience in rural areas',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-        </svg>
-      ),
-      color: 'hand-success'
-    },
-    {
-      id: 'stat3',
-      number: '100000+',
-      label: 'Youth Benifitted',
-      description: 'Creative works by  youth showcasing their talent globally',
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-        </svg>
-      ),
-      color: 'hand-warning'
-    },
-    {
-      id: 'stat4',
-      number: '100+',
-      label: 'Health Camps',
-      description: 'Camps conducted addressing the health of marginalised communities',
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-        </svg>
-      ),
-      color: 'hand-primary'
-    },
-    {
-      id: 'stat5',
-      number: '50+',
-      label: 'Sports Events',
-      description: 'Tournaments and cultural events fostering talent and community',
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M4 14h4l2-3 3 6 2-4h5"
+          />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M12 5c-2.5-3-7 0-4 4l4 4 4-4c3-4-1.5-7-4-4z"
+          />
         </svg>
       ),
       color: 'hand-success'
     }
+    // {
+    //   id: 'stat3',
+    //   number: '100000+',
+    //   label: 'Youth Benifitted',
+    //   description: 'Creative works by  youth showcasing their talent globally',
+    //   icon: (
+    //     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    //       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+    //     </svg>
+    //   ),
+    //   color: 'hand-warning'
+    // },
+    // {
+    //   id: 'stat4',
+    //   number: '100+',
+    //   label: 'Health Camps',
+    //   description: 'Camps conducted addressing the health of marginalised communities',
+    //   icon: (
+    //     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    //       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+    //     </svg>
+    //   ),
+    //   color: 'hand-primary'
+    // },
+    // {
+    //   id: 'stat5',
+    //   number: '50+',
+    //   label: 'Sports Events',
+    //   description: 'Tournaments and cultural events fostering talent and community',
+    //   icon: (
+    //     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    //       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+    //     </svg>
+    //   ),
+    //   color: 'hand-success'
+    // }
   ]
 
   return (
@@ -167,8 +178,8 @@ export default function StatsSection() {
         {/* Stats Layout - 3 on first row, 2 on second row */}
         <div className="flex flex-col gap-6 md:gap-8 max-w-6xl mx-auto">
           {/* First row - 3 stats */}
-          <div className="grid grid-cols-3 gap-3 md:gap-6 lg:gap-8">
-            {stats.slice(0, 3).map((stat, index) => (
+          <div className="grid grid-cols-2 gap-3 md:gap-6 lg:gap-8">
+            {stats.slice(0, 2).map((stat, index) => (
               <div
                 key={stat.id}
                 className={`group relative rounded-xl p-4 md:p-8 transition-all duration-300 text-center ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'

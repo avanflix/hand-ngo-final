@@ -9,14 +9,14 @@ export default function OurWorkSection() {
     '/ourwork/3.jpg',
     '/ourwork/4.jpg',
     '/ourwork/5.jpg',
-    '/ourwork/6.jpg'
+    // '/ourwork/6.jpg'
   ]
   const images2 = [
     '/ourwork/7.jpg',
     '/ourwork/8.jpg',
     '/ourwork/9.jpg',
     '/ourwork/10.jpg',
-    '/ourwork/11.jpg',
+    // '/ourwork/11.jpg',
     '/ourwork/12.jpg',
   ]
 

@@ -12,34 +12,34 @@ export default function LandingSection() {
       src: '/livelihood/3.jpg',
       alt: 'Livelihood Programs - HAND',
       title: 'Livelihood',
-      tagline: 'Sustainable livelihoods for stronger communities',
+      tagline: 'Sustainable livelihoods',
       description: 'Creating sustainable income opportunities for women and youth through practical skills in tailoring, handicrafts, digital media, and micro-enterprise development'
     },
-    {
-      src: '/education/1.jpg',
-      alt: 'Education Programs - HAND',
-      title: 'Education',
-      tagline: 'Learning today, leading tomorrow',
-      description: 'Breaking poverty cycles through inclusive learning environments with digital literacy and 21st-century skills for rural children'
-    },
-    {
-      src: '/rural-development/1.jpeg',
-      alt: 'Rural Development - HAND',
-      title: 'Rural Development',
-      tagline: 'Empowering Villages, building nations',
-      description: 'Transforming villages through infrastructure, modern agriculture, and community-led initiatives for a self-sufficient rural India'
-    },
-    {
-      src: '/skill-development/new1.jpg',
-      alt: 'Skill Development - HAND',
-      title: 'Skill Development',
-      tagline: 'Creating impact through sustainable skilling',
-      description: 'Bridging the digital divide by connecting remote villages with technology, internet access, and digital services'
-    },
+    // {
+    //   src: '/education/1.jpg',
+    //   alt: 'Education Programs - HAND',
+    //   title: 'Education',
+    //   tagline: 'Learning today, leading tomorrow',
+    //   description: 'Breaking poverty cycles through inclusive learning environments with digital literacy and 21st-century skills for rural children'
+    // },
+    // {
+    //   src: '/rural-development/1.jpeg',
+    //   alt: 'Rural Development - HAND',
+    //   title: 'Rural Development',
+    //   tagline: 'Empowering Villages, building nations',
+    //   description: 'Transforming villages through infrastructure, modern agriculture, and community-led initiatives for a self-sufficient rural India'
+    // },
+    // {
+    //   src: '/skill-development/new1.jpg',
+    //   alt: 'Skill Development - HAND',
+    //   title: 'Skill Development',
+    //   tagline: 'Creating impact through sustainable skilling',
+    //   description: 'Bridging the digital divide by connecting remote villages with technology, internet access, and digital services'
+    // },
     {
       src: '/climate/1.jpg',
       alt: 'Climate Crisis Programs - HAND',
-      title: 'Climate Crisis',
+      title: 'Climate Change',
       tagline: 'Protecting Our Planet',
       description: 'Addressing climate change through sustainable practices, renewable energy, and community-based conservation initiatives'
     }
@@ -99,23 +99,22 @@ export default function LandingSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-black/20 to-transparent z-10"></div>
 
         {/* Content Container */}
-        <div className="absolute inset-0 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
-            {/* Left Column - Dynamic Content */}
-            <div className="text-left space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-5xl text-white leading-tight font-heading font-bold animate-fade-in whitespace-nowrap">
-                {carouselSlides[currentSlide].tagline}
-              </h1>
+        <div className="absolute inset-0 z-20 max-w-7xl mx-auto pl-20 pr-4 sm:pl-24 sm:pr-6 lg:pl-28 lg:pr-8 h-full flex items-center">          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+          {/* Left Column - Dynamic Content */}
+          <div className="text-left space-y-4">
+            <h1 className="text-4xl md:text-5xl lg:text-5xl text-white leading-tight font-heading font-bold animate-fade-in whitespace-nowrap">
+              {carouselSlides[currentSlide].tagline}
+            </h1>
 
-              {/* <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl animate-fade-in animation-delay-200">
+            {/* <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl animate-fade-in animation-delay-200">
                 {carouselSlides[currentSlide].description}
               </p> */}
 
-            </div>
-
-            {/* Right Column - Visual balance */}
-            <div className="hidden lg:block"></div>
           </div>
+
+          {/* Right Column - Visual balance */}
+          <div className="hidden lg:block"></div>
+        </div>
         </div>
 
         {/* Navigation Arrows */}

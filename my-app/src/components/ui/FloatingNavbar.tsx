@@ -96,10 +96,10 @@ export default function FloatingNavbar() {
 
                 {activeDropdown === 'what-we-do' && (
                   <div className="absolute top-full overflow-hidden left-0 w-64 bg-white rounded-lg shadow-xl border border-gray-200  z-50">
-                    <Link href="/domains/education" className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">Education</Link>
+                    {/* <Link href="/domains/education" className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">Education</Link> */}
                     <Link href="/domains/livelihood" className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">Livelihood</Link>
-                    <Link href="/domains/rural-development" className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">Rural Development</Link>
-                    <Link href="/domains/skill-development" className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">Skill Development</Link>
+                    {/* <Link href="/domains/rural-development" className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">Rural Development</Link> */}
+                    {/* <Link href="/domains/skill-development" className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">Skill Development</Link> */}
                     <Link href="/domains/climate-change" className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">Climate Change</Link>
                   </div>
                 )}

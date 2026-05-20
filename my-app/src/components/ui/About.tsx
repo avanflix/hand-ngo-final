@@ -64,8 +64,12 @@ export default function AboutSection() {
             About <span className="text-blue-600">HAND</span>
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full mb-4" />
-          <p className="text-base w-[80%]  md:text-lg text-black  mx-auto leading-relaxed">
+          {/* <p className="text-base w-[80%]  md:text-lg text-black  mx-auto leading-relaxed">
             We are a purpose-driven Non governmental organisation committed to building sustainable communities through <br /> skill development, rural development, education, livelihood generation, and climate action. Our work focuses on empowering individuals-especially women and youth-with practical skills, knowledge, and opportunities to become self-reliant. By strengthening education, promoting inclusive livelihoods, and supporting rural ecosystems, we strive to create long-term social and economic impact.Rooted in community participation and sustainability, we believe that meaningful change begins at the grassroots and grows with collective effort
+          </p> */}
+          <p className="text-base w-[80%] md:text-lg text-black mx-auto leading-relaxed">
+            We are a purpose-driven non-governmental organization focused on climate action and sustainable livelihood generation, empowering communities with eco-friendly opportunities for economic growth and resilience. <br />
+            Through climate-conscious initiatives and community-driven solutions, we help vulnerable populations adapt to environmental challenges while building self-reliance. Our mission is to create lasting social impact by connecting sustainable livelihoods with environmental responsibility.
           </p>
         </div>
 
@@ -127,21 +131,20 @@ export default function AboutSection() {
                 <h4 className="text-lg md:text-xl text-blue-800 font-heading font-semibold">Our Vision</h4>
               </div>
               <p className="text-sm md:text-base text-black leading-relaxed">
-                To empower the underserved across India by providing access to education, healthcare, sustainable livelihoods, and digital connectivity, fostering self-reliance and long-term development.
+                A future where communities thrive through sustainable livelihoods and effective climate action, building resilience, economic stability, and a greener future for generations to come.
               </p>
             </div>
           </div>
 
           {/* Logo in Center */}
           <div className="relative z-20">
-            <div className="relative w-80 h-80 bg-[#FFFFFA] rounded-lg shadow-2xl overflow-hidden border-2 border-gray-200 flex items-center justify-center">
-              <Image
-                src="/logo_bg.png"
-                alt="HAND Logo"
-                fill
-                className="object-cover"
-                priority
-              />
+            <div className="relative w-56 h-56 md:w-64 md:h-64 bg-[#FFFFFA] rounded-lg shadow-2xl overflow-hidden border-2 border-gray-200 flex items-center justify-center">              <Image
+              src="/logo_bg.png"
+              alt="HAND Logo"
+              fill
+              className="object-cover"
+              priority
+            />
             </div>
           </div>
 

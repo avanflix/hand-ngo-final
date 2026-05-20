@@ -22,7 +22,7 @@ export default function Footer() {
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-white">HAND</h3>
-                <p className="text-blue-400 text-sm">Empowering Rural India</p>
+                {/* <p className="text-blue-400 text-sm">Empowering Rural India</p> */}
               </div>
             </div>
             <p className="text-gray-300 leading-relaxed mb-6 max-w-md text-sm">
@@ -73,10 +73,10 @@ export default function Footer() {
             <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4 text-white border-b border-gray-600 pb-2">Our Programs</h4>
             <ul className="space-y-2 md:space-y-3">
               {[
-                { name: 'Education', href: '/domains/education' },
+                // { name: 'Education', href: '/domains/education' },
                 { name: 'Livelihood', href: "/domains/livelihood" },
-                { name: 'Rural Development', href: '/domains/rural-development' },
-                { name: 'Skill Development', href: '/domains/skill-development' },
+                // { name: 'Rural Development', href: '/domains/rural-development' },
+                // { name: 'Skill Development', href: '/domains/skill-development' },
                 { name: 'Climate Change', href: '/domains/climate-change' },
               ].map((item, idx) => (
                 <li key={idx}>

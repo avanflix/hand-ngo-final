@@ -29,11 +29,11 @@ export default function Partners() {
   }, [])
 
   const partners = [
-    {
-      id: 'partner1',
-      name: 'AvanFlix',
-      logo: '/sponsers/avanflix.png'
-    },
+    // {
+    //   id: 'partner1',
+    //   name: 'AvanFlix',
+    //   logo: '/sponsers/avanflix.png'
+    // },
     {
       id: 'partner2',
       name: 'KeySolutus',
@@ -79,13 +79,13 @@ export default function Partners() {
 
       <div className="relative z-10 w-[90vw] max-w-none mx-auto px-4 h-full flex flex-col">
         {/* Header */}
-        <div className="text-center mb-6 md:mb-8">
-          <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 ${
+        <div className="text-center">
+          <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 ${
             isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'
           }`}>
             Our <span className="text-blue-600">Partners</span> & Supporters
           </h2>
-          <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full mb-4" />
+          <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full mt-5 " />
           <p className={`text-base md:text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed ${
             isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'
           }`} style={{ animationDelay: '0.2s' }}>
@@ -99,7 +99,7 @@ export default function Partners() {
             {/* Our Partners */}
             <div>
               {/* <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our Partners</h3> */}
-              <div className="grid grid-cols-2 gap-4 md:gap-6 lg:gap-8">
+              <div className="grid grid-cols-2 gap-4 md:gap-6 lg:gap-4">
                 {partners.map((partner, index) => (
                   <div
                     key={partner.id}
@@ -109,20 +109,20 @@ export default function Partners() {
                     style={{ animationDelay: `${0.3 + index * 0.1}s` }}
                   >
                     {/* Partner Logo */}
-                    <div className="w-70 h-70  mb-3 md:mb-4 flex items-center justify-center grayscale-0 transition-all duration-300">
+                    <div className="w-40 h-40 flex items-center justify-center grayscale-0 transition-all duration-300">
                       <Image
                         src={partner.logo}
                         alt={partner.name}
                         className="max-w-full max-h-full object-contain opacity-100"
-                        width={600}
-                        height={600}
+                        width={300}
+                        height={300}
                       />
                     </div>
 
                     {/* Partner Name - Hidden by default, shown on hover */}
-                    <h4 className="text-sm font-semibold text-gray-600 group-hover:text-hand-neutral-700 transition-colors duration-300 opacity-0 group-hover:opacity-100 absolute -bottom-6 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
+                    {/* <h4 className="text-sm font-semibold text-gray-600 group-hover:text-hand-neutral-700 transition-colors duration-300 opacity-0 group-hover:opacity-100 absolute -bottom-6 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
                       {partner.name}
-                    </h4>
+                    </h4> */}
                   </div>
                 ))}
               </div>

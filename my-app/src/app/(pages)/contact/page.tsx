@@ -12,7 +12,7 @@ export default function Contact() {
       </section> */}
 
       {/* Contact Section */}
-      <section className="relative pt-30 bg-white">
+      <section className="relative pt-40 bg-white">
         <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Get in <span className="text-blue-600">Touch</span>
@@ -166,7 +166,7 @@ export default function Contact() {
                     id="phone"
                     name="phone"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
-                    placeholder="+91 70367 77677"
+                    placeholder="+91 "
                   />
                 </div>
 

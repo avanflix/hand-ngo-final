@@ -29,38 +29,38 @@ export default function WhatWeDoSection() {
   }, [])
 
   const services = [
-    {
-      id: 'education',
-      image: '/education/2bg.png',
-      title: 'Education',
-      description: 'Ensuring access to inclusive learning environments that support academic, social, emotional, and creative growth for rural children.',
-      color: 'blue',
-      link: '/domains/education'
-    },
+    // {
+    //   id: 'education',
+    //   image: '/education/2bg.png',
+    //   title: 'Education',
+    //   description: 'Ensuring access to inclusive learning environments that support academic, social, emotional, and creative growth for rural children.',
+    //   color: 'blue',
+    //   link: '/domains/education'
+    // },
     {
       id: 'livelihood',
-      image: '/livelihood/22.png',
+      image: '/livelihood/2.png',
       title: 'Livelihood',
       description: 'Creating sustainable income opportunities and reducing poverty through technical training, micro-enterprise support, and skill building.',
       color: 'blue',
       link: '/domains/livelihood'
     },
-    {
-      id: 'rural-development',
-      image: '/icons/rural-development.png',
-      title: 'Rural Development',
-      description: 'Transforming villages through infrastructure development, modern agricultural practices, and community-led initiatives.',
-      color: 'blue',
-      link: '/domains/rural-development'
-    },
-    {
-      id: 'skill-development',
-      image: '/skill-development/bg2.jpg',
-      title: 'Skill Development',
-      description: 'Equipping youth with industry-relevant technical and vocational skills for a better future.',
-      color: 'blue',
-      link: '/domains/skill-development'
-    },
+    // {
+    //   id: 'rural-development',
+    //   image: '/icons/rural-development.png',
+    //   title: 'Rural Development',
+    //   description: 'Transforming villages through infrastructure development, modern agricultural practices, and community-led initiatives.',
+    //   color: 'blue',
+    //   link: '/domains/rural-development'
+    // },
+    // {
+    //   id: 'skill-development',
+    //   image: '/skill-development/bg2.jpg',
+    //   title: 'Skill Development',
+    //   description: 'Equipping youth with industry-relevant technical and vocational skills for a better future.',
+    //   color: 'blue',
+    //   link: '/domains/skill-development'
+    // },
     {
       id: 'climate-change',
       image: '/icons/climate-change.png',

@@ -12,14 +12,14 @@ export default function SupportSection() {
   const [isTransitioning, setIsTransitioning] = useState(true)
 
   const supportOptions = [
-    {
-      id: 1,
-      title: 'EDUCATION',
-      subtitle: 'Enable Learning Opportunities',
-      description: 'Break poverty cycles through inclusive learning environments, digital literacy, and scholarship support for rural children.',
-      image: '/education/4.jpeg',
-      color: 'blue'
-    },
+    // {
+    //   id: 1,
+    //   title: 'EDUCATION',
+    //   subtitle: 'Enable Learning Opportunities',
+    //   description: 'Break poverty cycles through inclusive learning environments, digital literacy, and scholarship support for rural children.',
+    //   image: '/education/4.jpeg',
+    //   color: 'blue'
+    // },
     {
       id: 2,
       title: 'LIVELIHOOD',
@@ -28,14 +28,14 @@ export default function SupportSection() {
       image: '/livelihood/1.png',
       color: 'blue'
     },
-    {
-      id: 3,
-      title: 'RURAL DEVELOPMENT',
-      subtitle: 'Transform Villages',
-      description: 'Support infrastructure development, modern agricultural practices, and community-led initiatives for self-sufficient villages.',
-      image: '/rural-development/1.jpeg',
-      color: 'blue'
-    },
+    // {
+    //   id: 3,
+    //   title: 'RURAL DEVELOPMENT',
+    //   subtitle: 'Transform Villages',
+    //   description: 'Support infrastructure development, modern agricultural practices, and community-led initiatives for self-sufficient villages.',
+    //   image: '/rural-development/1.jpeg',
+    //   color: 'blue'
+    // },
     {
       id: 4,
       title: 'CLIMATE CHANGE',
@@ -44,14 +44,14 @@ export default function SupportSection() {
       image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400&h=300&fit=crop',
       color: 'blue'
     },
-    {
-      id: 5,
-      title: 'SKILL DEVELOPMENT',
-      subtitle: 'Build Future Skills',
-      description: 'Equip youth with industry-relevant technical skills in coding, mechanics, and digital media for a better future.',
-      image: '/skill-development/bg2.jpg',
-      color: 'blue'
-    }
+    // {
+    //   id: 5,
+    //   title: 'SKILL DEVELOPMENT',
+    //   subtitle: 'Build Future Skills',
+    //   description: 'Equip youth with industry-relevant technical skills in coding, mechanics, and digital media for a better future.',
+    //   image: '/skill-development/bg2.jpg',
+    //   color: 'blue'
+    // }
   ]
 
   const nextSlide = () => {
@@ -119,7 +119,7 @@ export default function SupportSection() {
 
   return (
     <section className="relative py-8 bg-white overflow-hidden">
-      <div className="w-full flex flex-col lg:flex-row items-center gap-8">
+      <div className="w-full flex flex-col lg:flex-row items-center">
         {/* Left Side - Content */}
         <div className="w-full lg:w-auto lg:flex-shrink-0 px-8 lg:px-16 lg:pr-8">
           <div className="max-w-md">
@@ -182,11 +182,11 @@ export default function SupportSection() {
                     className="object-cover"
                   />
                   {/* Tax Save Badge */}
-                  <div className="absolute top-4 right-4 bg-yellow-400 text-black font-bold px-4 py-2 rounded-lg shadow-lg">
+                  {/* <div className="absolute top-4 right-4 bg-yellow-400 text-black font-bold px-4 py-2 rounded-lg shadow-lg">
                     <div className="text-xs">SAVE TAX</div>
                     <div className="text-sm">ON YOUR</div>
                     <div className="text-xs">DONATION</div>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="p-6">
                   <div className="text-blue-600 text-sm font-bold mb-2">
@@ -245,13 +245,13 @@ export default function SupportSection() {
                           className="object-cover"
                         />
                         {/* Tax Save Badge - only on first card of each set */}
-                        {realIdx === 0 && (
+                        {/* {realIdx === 0 && (
                           <div className="absolute top-4 right-4 bg-yellow-400 text-black font-bold px-4 py-2 rounded-lg shadow-lg">
                             <div className="text-xs">SAVE TAX</div>
                             <div className="text-sm">ON YOUR</div>
                             <div className="text-xs">DONATION</div>
                           </div>
-                        )}
+                        )} */}
                       </div>
                       <div className="p-6">
                         <div className="text-blue-600 text-sm font-bold mb-2">

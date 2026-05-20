@@ -149,7 +149,7 @@ export default function TeamSection() {
         </div>
 
         {/* Team stats */}
-        <div
+        {/* <div
           className={`grid grid-cols-4  gap-2 md:gap-4 mb-6 md:mb-8 max-w-4xl mx-auto ${
             isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'
           }`}
@@ -164,7 +164,7 @@ export default function TeamSection() {
               <div className="text-xs md:text-sm text-gray-700">{stat.label}</div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Team members - centered avatar layout */}
         <div className="flex-grow flex items-center">

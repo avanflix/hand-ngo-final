@@ -8,7 +8,7 @@ export default function Partners() {
       <FloatingNavbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-50 to-blue-100 pt-10">
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-50 to-blue-100 pt-15">
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-20">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -79,7 +79,7 @@ export default function Partners() {
       </section>
 
       {/* Partnership Models */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
@@ -147,131 +147,9 @@ export default function Partners() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Current Partners */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Our <span className="text-blue-600">Partners</span>
-            </h2>
-            <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full mb-4" />
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Trusted by leading corporations and organizations committed to rural development.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
-            {/* Placeholder logos - replace with actual partner logos */}
-            <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-full h-12 bg-gradient-to-r from-blue-100 to-blue-200 rounded flex items-center justify-center">
-                <span className="text-blue-600 font-bold text-sm">TCS</span>
-              </div>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-full h-12 bg-gradient-to-r from-green-100 to-green-200 rounded flex items-center justify-center">
-                <span className="text-green-600 font-bold text-sm">Infosys</span>
-              </div>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-full h-12 bg-gradient-to-r from-purple-100 to-purple-200 rounded flex items-center justify-center">
-                <span className="text-purple-600 font-bold text-sm">Wipro</span>
-              </div>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-full h-12 bg-gradient-to-r from-orange-100 to-orange-200 rounded flex items-center justify-center">
-                <span className="text-orange-600 font-bold text-sm">HCL</span>
-              </div>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-full h-12 bg-gradient-to-r from-red-100 to-red-200 rounded flex items-center justify-center">
-                <span className="text-red-600 font-bold text-sm">Reliance</span>
-              </div>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-full h-12 bg-gradient-to-r from-indigo-100 to-indigo-200 rounded flex items-center justify-center">
-                <span className="text-indigo-600 font-bold text-sm">Tata</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Impact Stories */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Partner Success <span className="text-blue-600">Stories</span>
-            </h2>
-            <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full mb-4" />
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              See how our partnerships have created lasting impact in rural communities.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl p-8 border border-indigo-200">
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center">
-                  <span className="text-indigo-600 font-bold">TCS</span>
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-gray-900">Digital Literacy Program</h3>
-                  <p className="text-indigo-600 text-sm">Technology Partner</p>
-                </div>
-              </div>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                &ldquo;Partnering with HAND to establish 50 smart classrooms across rural Maharashtra. Our joint initiative has trained 2,500 students in digital skills, with 85% placement rate in technology jobs.&rdquo;
-              </p>
-              <div className="grid grid-cols-3 gap-4 text-center">
-                <div>
-                  <div className="text-2xl font-bold text-indigo-600">50</div>
-                  <div className="text-sm text-gray-600">Smart Classrooms</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-indigo-600">2,500</div>
-                  <div className="text-sm text-gray-600">Students Trained</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-indigo-600">85%</div>
-                  <div className="text-sm text-gray-600">Job Placement</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border border-green-200">
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                  <span className="text-green-600 font-bold">Reliance</span>
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-gray-900">Sustainable Agriculture Initiative</h3>
-                  <p className="text-green-600 text-sm">Agriculture Partner</p>
-                </div>
-              </div>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                &ldquo;Our partnership focuses on sustainable farming in drought-prone areas. We&apos;ve implemented rainwater harvesting and organic farming techniques benefiting 15,000 farmers across 200 villages.&rdquo;
-              </p>
-              <div className="grid grid-cols-3 gap-4 text-center">
-                <div>
-                  <div className="text-2xl font-bold text-green-600">200</div>
-                  <div className="text-sm text-gray-600">Villages</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-green-600">15,000</div>
-                  <div className="text-sm text-gray-600">Farmers</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-green-600">40%</div>
-                  <div className="text-sm text-gray-600">Yield Increase</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Contact CTA */}
       {/* <section className="py-20 bg-gradient-to-r from-indigo-600 to-blue-600 text-white">
