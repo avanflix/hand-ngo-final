@@ -90,8 +90,7 @@ export default function AboutUs() {
                 To empower rural communities across India by providing access to education, healthcare, sustainable livelihoods, and digital connectivity, fostering self-reliance and long-term development.
               </p> */}
               <p className="text-gray-700 leading-relaxed text-lg">
-                To enable inclusive and sustainable development by strengthening livelihoods, fostering resilience, advancing education and health, and empowering marginalized communities to become self-reliant.
-              </p>
+                To empower marginalized communities through sustainable livelihood opportunities and climate action, fostering resilience, self-reliance, and environmental sustainability.              </p>
             </div>
 
             <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-2xl shadow-lg p-8 border border-indigo-200">

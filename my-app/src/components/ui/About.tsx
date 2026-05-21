@@ -159,8 +159,7 @@ export default function AboutSection() {
                 <h4 className="text-lg md:text-xl text-blue-800 font-heading font-semibold">Our Mission</h4>
               </div>
               <p className="text-sm md:text-base text-black leading-relaxed">
-                To enable inclusive and sustainable development by strengthening livelihoods, fostering resilience, advancing education and health, and empowering marginalized communities to become self-reliant.
-              </p>
+                To empower marginalized communities through sustainable livelihood opportunities and climate action, fostering resilience, self-reliance, and environmental sustainability.              </p>
             </div>
             {/* Decorative lines */}
             <div className="flex items-center mt-4 justify-end">
