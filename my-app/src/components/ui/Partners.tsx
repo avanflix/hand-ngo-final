@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Partners() {
   const [isVisible, setIsVisible] = useState(false)
@@ -29,14 +30,16 @@ export default function Partners() {
   }, [])
 
   const partners = [
-    // {
-    //   id: 'partner1',
-    //   name: 'AvanFlix',
-    //   logo: '/sponsers/avanflix.png'
-    // },
+    {
+      id: 'partner1',
+      name: 'JK Projects',
+      url: 'https://jkprojects.in/',
+      logo: '/sponsers/JK Projects.png'
+    },
     {
       id: 'partner2',
       name: 'KeySolutus',
+      url: 'https://www.keysolutus.com/',
       logo: '/sponsers/keysolutus.png'
     },
     // {
@@ -64,8 +67,8 @@ export default function Partners() {
           <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
             <defs>
               <pattern id="partners-pattern" width="20" height="20" patternUnits="userSpaceOnUse">
-                <circle cx="10" cy="10" r="2" fill="hsl(var(--hand-neutral-500))"/>
-                <circle cx="10" cy="10" r="0.5" fill="hsl(var(--hand-neutral-400))"/>
+                <circle cx="10" cy="10" r="2" fill="hsl(var(--hand-neutral-500))" />
+                <circle cx="10" cy="10" r="0.5" fill="hsl(var(--hand-neutral-400))" />
               </pattern>
             </defs>
             <rect width="100" height="100" fill="url(#partners-pattern)" />
@@ -80,15 +83,13 @@ export default function Partners() {
       <div className="relative z-10 w-[90vw] max-w-none mx-auto px-4 h-full flex flex-col">
         {/* Header */}
         <div className="text-center">
-          <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 ${
-            isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'
-          }`}>
+          <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'
+            }`}>
             Our <span className="text-blue-600">Partners</span> & Supporters
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full mt-5 " />
-          <p className={`text-base md:text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed ${
-            isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'
-          }`} style={{ animationDelay: '0.2s' }}>
+          <p className={`text-base md:text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'
+            }`} style={{ animationDelay: '0.2s' }}>
             Together with our partners, we create lasting impact and sustainable change worldwide.
           </p>
         </div>
@@ -103,21 +104,22 @@ export default function Partners() {
                 {partners.map((partner, index) => (
                   <div
                     key={partner.id}
-                    className={`group relative flex flex-col items-center text-center ${
-                      isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'
-                    }`}
+                    className={`group relative flex flex-col items-center text-center ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'
+                      }`}
                     style={{ animationDelay: `${0.3 + index * 0.1}s` }}
                   >
                     {/* Partner Logo */}
-                    <div className="w-40 h-40 flex items-center justify-center grayscale-0 transition-all duration-300">
-                      <Image
-                        src={partner.logo}
-                        alt={partner.name}
-                        className="max-w-full max-h-full object-contain opacity-100"
-                        width={300}
-                        height={300}
-                      />
-                    </div>
+                    <a href={partner.url} target="_blank" rel="noopener noreferrer">
+                      <div className="w-40 h-40 flex items-center justify-center grayscale-0 transition-all duration-300 cursor-pointer hover:scale-105">
+                        <Image
+                          src={partner.logo}
+                          alt={partner.name}
+                          className="max-w-full max-h-full object-contain opacity-100"
+                          width={300}
+                          height={300}
+                        />
+                      </div>
+                    </a>
 
                     {/* Partner Name - Hidden by default, shown on hover */}
                     {/* <h4 className="text-sm font-semibold text-gray-600 group-hover:text-hand-neutral-700 transition-colors duration-300 opacity-0 group-hover:opacity-100 absolute -bottom-6 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
