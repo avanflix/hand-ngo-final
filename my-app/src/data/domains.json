@@ -64,7 +64,7 @@
         "title": "Vistaraku Making",
         "description": "Our Vistaraku Making Training program supports rural women in gaining practical skills to produce eco-friendly leaf plates—locally known as Vistaraku.",
         "fullDescription": "Our Vistaraku Making Training program supports rural women in gaining practical skills to produce eco-friendly leaf plates—locally known as Vistaraku—that are widely used for traditional functions, events, and sustainable food packaging. Through hands-on workshops, we train women in leaf collection, cleaning, processing, stitching, and plate finishing, ensuring high-quality and market-ready products. This sustainable livelihood initiative helps women earn a stable income from resources available within their own communities, reducing dependency on single-use plastics and supporting environmental conservation. By creating a green income source, we build confidence, enhance economic resilience, and promote the use of biodegradable products that align with India’s growing demand for eco-conscious alternatives. At HAND, we ensure continuous support through market linkages, micro-enterprise guidance, and collective production models, helping women establish small-scale, home-based businesses. This initiative not only advances women’s empowerment but also contributes to a cleaner ecosystem and stronger local economies. When women thrive through eco-friendly enterprises, nature and communities grow together.",
-        "image": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=400&h=300&fit=crop"
+        "image": "/ourwork/9.jpg"
       }
     ],
     "marqueeImages": [
@@ -158,7 +158,7 @@
         "id": "leaf-plates",
         "title": "Eco-Friendly Leaf Plates",
         "description": "Leaf plates, made from naturally fallen leaves such as areca or sal leaves, are 100% biodegradable, compostable, and plastic-free.",
-        "image": "https://images.unsplash.com/photo-1542023537-8e6f157ccf72?w=400&h=300&fit=crop"
+        "image": "/livelihood/6.png"
       },
       {
         "id": "plastic-reduction",
@@ -174,13 +174,11 @@
       }
     ],
     "marqueeImages": [
-      "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1577896851231-70ef18881754?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1529390079861-591de354faf5?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1594708767771-a7502209ff51?w=400&h=300&fit=crop"
+      "/ourwork/1.jpg",
+      "/ourwork/3.jpg",
+      "/ourwork/5.jpg",
+      "/ourwork/7.jpg",
+      "/ourwork/9.jpg"
     ]
   }
 ]

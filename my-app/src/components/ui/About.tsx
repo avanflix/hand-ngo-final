@@ -139,7 +139,7 @@ export default function AboutSection() {
           {/* Logo in Center */}
           <div className="relative z-20">
             <div className="relative w-56 h-56 md:w-64 md:h-64 bg-[#FFFFFA] rounded-lg shadow-2xl overflow-hidden border-2 border-gray-200 flex items-center justify-center">              <Image
-              src="/logo_bg.png"
+              src="/logo_hand.jpg"
               alt="HAND Logo"
               fill
               className="object-cover"

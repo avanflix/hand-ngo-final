@@ -25,7 +25,7 @@ export default function SupportSection() {
       title: 'LIVELIHOOD',
       subtitle: 'Empower Sustainable Income',
       description: 'Create sustainable income opportunities for women and youth through micro-enterprise support, handicrafts, and vocational training.',
-      image: '/livelihood/1.png',
+      image: '/livelihood/3.jpg',
       color: 'blue'
     },
     // {
@@ -123,9 +123,10 @@ export default function SupportSection() {
         {/* Left Side - Content */}
         <div className="w-full lg:w-auto lg:flex-shrink-0 px-8 lg:px-16 lg:pr-8">
           <div className="max-w-md">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              How do you want to <br />
-              <span className="text-blue-600">make an impact</span> today?
+            <h2 className="text-2xl md:text-4xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+              How do you want to
+              <br />
+              <span className="text-blue-600">make an impact today?</span>
             </h2>
             <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-8">
               Your smallest contribution makes a big difference to rural communities. We count on the generosity of people like you to be able to create real change for India&apos;s future.

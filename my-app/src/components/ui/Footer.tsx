@@ -16,12 +16,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand section */}
           <div className="md:col-span-2 lg:col-span-1">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center">
-                <Image src="/logo hand.png" alt="HAND" width={64} height={64} className="w-full h-full object-contain" />
+            <div className="flex items-center space-x-3 mb-1">
+              <div className="w-46 h-36 bg-black rounded-full flex items-center justify-center">
+                <Image src="/logo hand.png" alt="HAND" width={104} height={104} className="w-full h-full object-contain" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-white">HAND</h3>
+                {/* <h3 className="text-2xl font-bold text-white">HAND</h3> */}
                 {/* <p className="text-blue-400 text-sm">Empowering Rural India</p> */}
               </div>
             </div>
@@ -32,13 +32,13 @@ export default function Footer() {
               {/* <a href="#" className="w-10 h-10 bg-white/10 hover:bg-blue-600 rounded-lg flex items-center justify-center text-white transition-colors">
                 <TwitterIcon className="w-5 h-5" />
               </a> */}
-              <a href="#" className="w-10 h-10 bg-white/10 hover:bg-blue-600 rounded-lg flex items-center justify-center text-white transition-colors">
+              <a href="https://www.linkedin.com/company/hand-human-action-for-need-and-development/?viewAsMember=true" target='_blank' className="w-10 h-10 bg-white/10 hover:bg-blue-600 rounded-lg flex items-center justify-center text-white transition-colors">
                 <LinkedinIcon className="w-5 h-5" />
               </a>
               <a href="https://www.instagram.com/hand__ngo" target='_blank' className="w-10 h-10 bg-white/10 hover:bg-blue-600 rounded-lg flex items-center justify-center text-white transition-colors">
                 <InstagramIcon className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-white/10 hover:bg-blue-600 rounded-lg flex items-center justify-center text-white transition-colors">
+              <a href="https://www.youtube.com/@HANDNGO1" target='_blank' className="w-10 h-10 bg-white/10 hover:bg-blue-600 rounded-lg flex items-center justify-center text-white transition-colors">
                 <YoutubeIcon className="w-5 h-5" />
               </a>
             </div>

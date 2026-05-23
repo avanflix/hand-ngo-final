@@ -10,7 +10,7 @@ export default function AboutUs() {
       <FloatingNavbar />
 
       {/* Hero Section */}
-      <section className="relative h-[118vh] flex items-center justify-center pt-7">
+      <section className="relative h-[110vh] flex items-center justify-center ">
         <div className="max-w-7xl mx-auto px-4 md:px-8 h-full flex items-center">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
             {/* Left Side - Text about HAND */}
@@ -93,9 +93,9 @@ export default function AboutUs() {
                To empower vulnerable communities by creating sustainable livelihood opportunities and advancing climate resilience for a self-reliant and sustainable future.       </p>
             </div>
 
-            <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-2xl shadow-lg p-8 border border-indigo-200">
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl shadow-lg p-8 border border-blue-200">
               <div className="flex items-center space-x-4 mb-6">
-                <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />

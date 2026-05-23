@@ -33,12 +33,12 @@ export default function FloatingNavbar() {
       {/* Main Navigation Row */}
       <nav className="bg-gray-50 w-full shadow-lg border-b border-gray-200">
         <div className="w-[90%] mx-auto py-4">
-          <div className="flex justify-between items-center h-24">
+          <div className="flex justify-between items-center h-12">
 
             {/* Logo Section */}
             <div className="flex-shrink-0 flex items-center">
               <Link href="/">
-                <div className="w-28 h-28 overflow-hidden rounded-md">
+                <div className="w-38 h-20 overflow-hidden rounded-md">
                   <Image
                     src="/logo_bg.png"
                     alt="HAND Logo"
