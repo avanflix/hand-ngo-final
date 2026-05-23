@@ -65,13 +65,6 @@
         "description": "Our Vistaraku Making Training program supports rural women in gaining practical skills to produce eco-friendly leaf plates—locally known as Vistaraku.",
         "fullDescription": "Our Vistaraku Making Training program supports rural women in gaining practical skills to produce eco-friendly leaf plates—locally known as Vistaraku—that are widely used for traditional functions, events, and sustainable food packaging. Through hands-on workshops, we train women in leaf collection, cleaning, processing, stitching, and plate finishing, ensuring high-quality and market-ready products. This sustainable livelihood initiative helps women earn a stable income from resources available within their own communities, reducing dependency on single-use plastics and supporting environmental conservation. By creating a green income source, we build confidence, enhance economic resilience, and promote the use of biodegradable products that align with India’s growing demand for eco-conscious alternatives. At HAND, we ensure continuous support through market linkages, micro-enterprise guidance, and collective production models, helping women establish small-scale, home-based businesses. This initiative not only advances women’s empowerment but also contributes to a cleaner ecosystem and stronger local economies. When women thrive through eco-friendly enterprises, nature and communities grow together.",
         "image": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=400&h=300&fit=crop"
-      },
-      {
-        "id": "digital-tech",
-        "title": "Digital Technology & Media",
-        "description": "Equipping youth with future-ready skills in content creation, photography, videography, and digital marketing for the modern economy.",
-        "fullDescription": "We equip youth with practical, future-ready digital skills in content creation, photography, videography, video editing and digital marketing. Through hands-on training and real-world projects, participants learn to plan, produce, and promote digital content across modern media platforms. This program enhances employability in the digital economy, opens opportunities in creative careers, and empowers young individuals to confidently build their professional presence online. By bridging the digital skills gap in underserved areas, we ensure that youth are prepared for today’s fast-growing media, technology, and communication industries.",
-        "image": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=400&h=300&fit=crop"
       }
     ],
     "marqueeImages": [
@@ -152,7 +145,7 @@
   },
   {
     "id": "climate-change",
-    "heroImage": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&h=600&fit=crop",
+    "heroImage": "/climate/1.jpg",
     "heroTitle": "Climate Change",
     "heroSubtitle": "Our Commitment to Eco-Friendly Leaf Plate Making",
     "heroButtonText": "Support Climate Action",

@@ -58,12 +58,12 @@ export default function Contact() {
                     <h3 className="font-bold text-gray-900 mb-2">Email Address</h3>
                     <p className="text-gray-600">
                       <a
-                        href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@handngo.org"
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=Hello@handngo.org"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-blue-600 hover:text-blue-700 transition-colors"
                       >
-                        contact@handngo.org
+                        Hello@handngo.org
                       </a>
                     </p>
                   </div>

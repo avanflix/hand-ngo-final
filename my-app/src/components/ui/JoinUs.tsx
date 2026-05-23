@@ -166,7 +166,7 @@ export default function JoinUsSection() {
             <div className={`bg-gradient-to-br from-hand-neutral-50 to-hand-neutral-100 rounded-2xl p-4 ${
               isVisible ? 'animate-slide-in-right' : 'opacity-0 translate-x-8'
             }`} style={{ animationDelay: '0.3s' }}>
-              <div className="text-center mb-4">
+              <div className="text-center mb-4 ">
                 <div className="text-hand-neutral-600 mb-3 flex justify-center">
                   <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
@@ -200,7 +200,7 @@ export default function JoinUsSection() {
               </button>
 
               <p className="text-xs text-gray-600 text-center mt-3">
-                Contact us at contact@handngo.org for more information
+                Contact us at Hello@handngo.org for more information
               </p>
             </div>
           </div>

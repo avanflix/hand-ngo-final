@@ -11,7 +11,7 @@ export default function LandingSection() {
     {
       src: '/livelihood/3.jpg',
       alt: 'Livelihood Programs - HAND',
-      title: 'Livelihood',
+      // title: 'Livelihood',
       tagline: 'Sustainable livelihoods',
       description: 'Creating sustainable income opportunities for women and youth through practical skills in tailoring, handicrafts, digital media, and micro-enterprise development'
     },
@@ -39,7 +39,7 @@ export default function LandingSection() {
     {
       src: '/climate/1.jpg',
       alt: 'Climate Crisis Programs - HAND',
-      title: 'Climate Change',
+      // title: 'Climate Change',
       tagline: 'Protecting Our Planet',
       description: 'Addressing climate change through sustainable practices, renewable energy, and community-based conservation initiatives'
     }
@@ -88,12 +88,12 @@ export default function LandingSection() {
               className="object-cover"
               priority={index === 0}
             />
-            {/* Domain Title - Bottom Right with Typing Animation */}
+            {/* Domain Title - Bottom Right with Typing Animation
             {index === currentSlide && (
               <div className="absolute bottom-10 right-10 z-20">
                 <TypingEffect text={slide.title} />
               </div>
-            )}
+            )} */}
           </div>
         ))}
         <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-black/20 to-transparent z-10"></div>

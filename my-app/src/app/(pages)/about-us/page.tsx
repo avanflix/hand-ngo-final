@@ -14,7 +14,7 @@ export default function AboutUs() {
         <div className="max-w-7xl mx-auto px-4 md:px-8 h-full flex items-center">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
             {/* Left Side - Text about HAND */}
-            <div className="space-y-6">
+            <div className="space-y-6 pt-20">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                 About <span className="text-blue-600">HAND</span>
               </h1>

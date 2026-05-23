@@ -128,7 +128,7 @@ export default function AboutSection() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                 </svg>
-                <h4 className="text-lg md:text-xl text-blue-800 font-heading font-semibold">Our Vision</h4>
+                <h4 className="text-lg md:text-xl text-blue-600 font-heading font-semibold">Our Vision</h4>
               </div>
               <p className="text-sm md:text-base text-black leading-relaxed">
                 A future where communities thrive through sustainable livelihoods and effective climate action, building resilience, economic stability, and a greener future for generations to come.
@@ -156,7 +156,7 @@ export default function AboutSection() {
                 <svg className="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <h4 className="text-lg md:text-xl text-blue-800 font-heading font-semibold">Our Mission</h4>
+                <h4 className="text-lg md:text-xl text-blue-600 font-heading font-semibold">Our Mission</h4>
               </div>
               <p className="text-sm md:text-base text-black leading-relaxed">
                 To empower vulnerable communities by creating sustainable livelihood opportunities and advancing climate resilience for a self-reliant and sustainable future.           </p>

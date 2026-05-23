@@ -126,11 +126,11 @@ export default function DomainLayout(props: DomainLayoutProps) {
           priority
         />
         {/* Wave Overlay */}
-        <div className="absolute bottom-0 left-0 w-full">
+        {/* <div className="absolute bottom-0 left-0 w-full">
           <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-20 fill-white">
             <path d="M0,60 C300,100 600,20 900,60 C1050,80 1200,40 1200,60 L1200,120 L0,120 Z"></path>
           </svg>
-        </div>
+        </div> */}
         {/* Content Overlay */}
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <div className="text-center text-white z-10 px-4">

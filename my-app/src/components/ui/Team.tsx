@@ -62,8 +62,8 @@ export default function TeamSection() {
 
     {
       id: 'member02',
-      slug: 'Sailaja Dogiparthi',
-      name: 'Sailaja Dogiparthi',
+      slug: 'Sailaja Di',
+      name: 'Sailaja D',
       role: 'Executive Director',
       location: 'Hyderbad , IND',
       bio: 'Leading HAND global operations...',
@@ -74,8 +74,8 @@ export default function TeamSection() {
     },
     {
       id: 'member03',
-      slug: 'Manpreet Kaur',
-      name: 'Manpreet Kaur',
+      slug: 'Manpreet K',
+      name: 'Manpreet K',
       role: 'Executive Director',
       location: 'Hyderabad, IND',
       bio: 'Leading HAND global operations...',
@@ -98,8 +98,8 @@ export default function TeamSection() {
     },
     {
       id: 'member05',
-      slug: 'Rohit chivukula',
-      name: 'Rohit chuvukula',
+      slug: 'Rohit C',
+      name: 'Rohit C',
       role: 'Executive Director',
       location: 'Hyderabad, IND',
       bio: 'Leading HAND global operations...',
@@ -238,7 +238,7 @@ export default function TeamSection() {
           </div>
         </div>
       </div>
-    {/* </Link> */}
+      {/* </Link> */}
     </div>
   )
 
@@ -288,25 +288,26 @@ export default function TeamSection() {
 
         {/* Team members - centered avatar layout */}
         <div className="flex-grow flex items-center">
-          <div className="space-y-16">
+          <div className="space-y-16 w-full">
 
             {/* OUR TEAM */}
             <div>
               <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8">
                 Our Team
               </h3>
-
-              <div className="flex justify-center">
+              <div className="flex justify-center w-full">
                 <div className="flex flex-wrap justify-center gap-6 max-w-6xl">
-                  {coreTeam.map((member, index) =>
-                    renderMemberCard(member, index)
-                  )}
+                  {coreTeam.map((member, index) => (
+                    <div key={index} className="w-full md:w-[320px] lg:w-[320px]">
+                      {renderMemberCard(member, index)}
+                    </div>
+                  ))}
                 </div>
               </div>
-            </div>
 
-            {/* ADVISORY TEAM */}
-            <div>
+            </div>
+                          {/* ADVISORY TEAM */}
+              {/* <div>
               <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8">
                 Our Advisory Team
               </h3>
@@ -318,10 +319,13 @@ export default function TeamSection() {
                 </div>
               </div>
 
-            </div>
+            </div> */}
+
           </div>
         </div>
       </div>
     </section >
   )
 }
+
+
