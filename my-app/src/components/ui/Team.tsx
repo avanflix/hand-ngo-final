@@ -54,7 +54,7 @@ export default function TeamSection() {
       location: 'Hyderabad, IND',
       bio: 'Leading HAND global operations...',
       fullBio: 'Sarah has 15+ years...',
-      avatar: '/ourteam/team/KamalC.png',
+      avatar: '/team/KamalC.png',
       linkedin: 'https://www.linkedin.com/in/kamal-c-747442171/',
       // twitter: 'https://twitter.com/sarahjohnson'
     },
@@ -66,7 +66,7 @@ export default function TeamSection() {
       location: 'Hyderbad , IND',
       bio: 'Leading HAND global operations...',
       fullBio: 'Sarah has 15+ years...',
-      avatar: '/ourteam/team/Sailaja.png',
+      avatar: '/team/Sailaja.png',
       linkedin: 'https://www.linkedin.com/in/sailaja-dogiparthi-74669734/',
       // twitter: 'https://twitter.com/sarahjohnson'
     },
@@ -102,7 +102,7 @@ export default function TeamSection() {
       location: 'Hyderabad, IND',
       bio: 'Leading HAND global operations...',
       fullBio: 'Sarah has 15+ years...',
-      avatar: '/ourteam/team/Rohith.png',
+      avatar: '/team/Rohith.png',
       linkedin: 'https://www.linkedin.com/in/rohitchivukula25/',
       // twitter: 'https://twitter.com/sarahjohnson'
     }
