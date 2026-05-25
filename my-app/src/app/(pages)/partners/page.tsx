@@ -66,7 +66,7 @@ export default function Partners() {
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=600&fit=crop"
+                  src="/team/Meet.png"
                   alt="Corporate partnership handshake"
                   width={600}
                   height={600}
