@@ -54,12 +54,10 @@ export default function TeamSection() {
       location: 'Hyderabad, IND',
       bio: 'Leading HAND global operations...',
       fullBio: 'Sarah has 15+ years...',
-      avatar: '/team/KamalC.png',
+      avatar: '/ourteam/team/KamalC.png',
       linkedin: 'https://www.linkedin.com/in/kamal-c-747442171/',
       // twitter: 'https://twitter.com/sarahjohnson'
-
     },
-
     {
       id: 'member02',
       slug: 'Sailaja Di',
@@ -68,7 +66,7 @@ export default function TeamSection() {
       location: 'Hyderbad , IND',
       bio: 'Leading HAND global operations...',
       fullBio: 'Sarah has 15+ years...',
-      avatar: '/team/Sailaja.png',
+      avatar: '/ourteam/team/Sailaja.png',
       linkedin: 'https://www.linkedin.com/in/sailaja-dogiparthi-74669734/',
       // twitter: 'https://twitter.com/sarahjohnson'
     },
@@ -104,7 +102,7 @@ export default function TeamSection() {
       location: 'Hyderabad, IND',
       bio: 'Leading HAND global operations...',
       fullBio: 'Sarah has 15+ years...',
-      avatar: '/team/Rohith.png',
+      avatar: '/ourteam/team/Rohith.png',
       linkedin: 'https://www.linkedin.com/in/rohitchivukula25/',
       // twitter: 'https://twitter.com/sarahjohnson'
     }
