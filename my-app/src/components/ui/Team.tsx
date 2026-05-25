@@ -54,7 +54,7 @@ export default function TeamSection() {
       location: 'Hyderabad, IND',
       bio: 'Leading HAND global operations...',
       fullBio: 'Sarah has 15+ years...',
-      avatar: 'https://avatar.iran.liara.run/public/49',
+      avatar: '/team/KamalC.png',
       linkedin: 'https://www.linkedin.com/in/kamal-c-747442171/',
       // twitter: 'https://twitter.com/sarahjohnson'
 
@@ -64,38 +64,38 @@ export default function TeamSection() {
       id: 'member02',
       slug: 'Sailaja Di',
       name: 'Sailaja D',
-      role: 'Executive Director',
+      role: 'Co-Founder',
       location: 'Hyderbad , IND',
       bio: 'Leading HAND global operations...',
       fullBio: 'Sarah has 15+ years...',
-      avatar: 'https://avatar.iran.liara.run/public/49',
+      avatar: '/team/Sailaja.png',
       linkedin: 'https://www.linkedin.com/in/sailaja-dogiparthi-74669734/',
       // twitter: 'https://twitter.com/sarahjohnson'
     },
-    {
-      id: 'member03',
-      slug: 'Manpreet K',
-      name: 'Manpreet K',
-      role: 'Executive Director',
-      location: 'Hyderabad, IND',
-      bio: 'Leading HAND global operations...',
-      fullBio: 'Sarah has 15+ years...',
-      avatar: 'https://avatar.iran.liara.run/public/49',
-      linkedin: 'https://linkedin.com/in/sarah-johnson',
-      // twitter: 'https://twitter.com/sarahjohnson'
-    },
-    {
-      id: 'member04',
-      slug: 'Arun',
-      name: 'Arun',
-      role: 'Executive Director',
-      location: 'Hyderabad, India',
-      bio: 'Leading HAND global operations...',
-      fullBio: 'Sarah has 15+ years...',
-      avatar: 'https://avatar.iran.liara.run/public/49',
-      linkedin: 'https://linkedin.com/in/sarah-johnson',
-      // twitter: 'https://twitter.com/sarahjohnson'
-    },
+    // {
+    //   id: 'member03',
+    //   slug: 'Manpreet K',
+    //   name: 'Manpreet K',
+    //   role: 'Executive Director',
+    //   location: 'Hyderabad, IND',
+    //   bio: 'Leading HAND global operations...',
+    //   fullBio: 'Sarah has 15+ years...',
+    //   avatar: 'https://avatar.iran.liara.run/public/49',
+    //   linkedin: 'https://linkedin.com/in/sarah-johnson',
+    //   // twitter: 'https://twitter.com/sarahjohnson'
+    // },
+    // {
+    //   id: 'member04',
+    //   slug: 'Arun',
+    //   name: 'Arun',
+    //   role: 'Executive Director',
+    //   location: 'Hyderabad, India',
+    //   bio: 'Leading HAND global operations...',
+    //   fullBio: 'Sarah has 15+ years...',
+    //   avatar: 'https://avatar.iran.liara.run/public/49',
+    //   linkedin: 'https://linkedin.com/in/sarah-johnson',
+    //   // twitter: 'https://twitter.com/sarahjohnson'
+    // },
     {
       id: 'member05',
       slug: 'Rohit C',
@@ -104,7 +104,7 @@ export default function TeamSection() {
       location: 'Hyderabad, IND',
       bio: 'Leading HAND global operations...',
       fullBio: 'Sarah has 15+ years...',
-      avatar: 'https://avatar.iran.liara.run/public/49',
+      avatar: '/team/Rohith.png',
       linkedin: 'https://www.linkedin.com/in/rohitchivukula25/',
       // twitter: 'https://twitter.com/sarahjohnson'
     }
