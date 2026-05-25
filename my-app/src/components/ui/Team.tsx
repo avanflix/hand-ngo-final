@@ -54,7 +54,7 @@ export default function TeamSection() {
       location: 'Hyderabad, IND',
       bio: 'Leading HAND global operations...',
       fullBio: 'Sarah has 15+ years...',
-      avatar: '/team/KamalC.png',
+      avatar: '/team/KamalC2.png',
       linkedin: 'https://www.linkedin.com/in/kamal-c-747442171/',
       // twitter: 'https://twitter.com/sarahjohnson'
     },
