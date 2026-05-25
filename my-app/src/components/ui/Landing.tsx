@@ -12,7 +12,7 @@ export default function LandingSection() {
       src: '/livelihood/3.jpg',
       alt: 'Livelihood Programs - HAND',
       // title: 'Livelihood',
-      tagline: 'Sustainable livelihoods',
+      // tagline: 'Sustainable livelihoods',
       description: 'Creating sustainable income opportunities for women and youth through practical skills in tailoring, handicrafts, digital media, and micro-enterprise development'
     },
     // {
@@ -40,7 +40,7 @@ export default function LandingSection() {
       src: '/climate/1.jpg',
       alt: 'Climate Crisis Programs - HAND',
       // title: 'Climate Change',
-      tagline: 'Protecting Our Planet',
+      // tagline: 'Protecting Our Planet',
       description: 'Addressing climate change through sustainable practices, renewable energy, and community-based conservation initiatives'
     }
   ]
@@ -102,9 +102,9 @@ export default function LandingSection() {
         <div className="absolute inset-0 z-20 max-w-7xl mx-auto pl-20 pr-4 sm:pl-24 sm:pr-6 lg:pl-28 lg:pr-8 h-full flex items-center">          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
           {/* Left Column - Dynamic Content */}
           <div className="text-left space-y-4">
-            <h1 className="text-4xl md:text-5xl lg:text-5xl text-white leading-tight font-heading font-bold animate-fade-in whitespace-nowrap">
+            {/* <h1 className="text-4xl md:text-5xl lg:text-5xl text-white leading-tight font-heading font-bold animate-fade-in whitespace-nowrap">
               {carouselSlides[currentSlide].tagline}
-            </h1>
+            </h1> */}
 
             {/* <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl animate-fade-in animation-delay-200">
                 {carouselSlides[currentSlide].description}
