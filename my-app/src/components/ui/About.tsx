@@ -90,7 +90,7 @@ export default function AboutSection() {
               style={{
                 strokeDasharray: isVisible ? '45' : '0',
                 strokeDashoffset: isVisible ? '45' : '0',
-                animation: isVisible ? 'drawLine 1.5s ease-out 0.5s forwards' : 'none'
+                animation: isVisible ? 'drawLine 0.2s ease-out 0.2s forwards' : 'none'
               }}
             />
 
@@ -106,7 +106,7 @@ export default function AboutSection() {
               style={{
                 strokeDasharray: isVisible ? '45' : '0',
                 strokeDashoffset: isVisible ? '45' : '0',
-                animation: isVisible ? 'drawLine 1.5s ease-out 0.8s forwards' : 'none'
+                animation: isVisible ? 'drawLine 0.2s ease-out 0.2s forwards' : 'none'
               }}
             />
 
@@ -115,7 +115,7 @@ export default function AboutSection() {
           <style dangerouslySetInnerHTML={{ __html: lineDrawKeyframes }} />
 
           {/* Vision - Top Right */}
-          <div className={`absolute top-8 right-4 md:top-12 md:right-12 max-w-xs md:max-w-sm z-10 ${isVisible ? 'opacity-0 animate-fade-in' : 'opacity-0'}`} style={isVisible ? { animationDelay: '2s', animationFillMode: 'forwards' } : {}}>
+          <div className={`absolute top-8 right-4 md:top-12 md:right-12 max-w-xs md:max-w-sm z-10 ${isVisible ? 'opacity-0 animate-fade-in' : 'opacity-0'}`} style={isVisible ? { animationDelay: '0.5s', animationFillMode: 'forwards' } : {}}>
             {/* Decorative lines */}
             <div className="flex items-center mb-4">
               <div className="w-8 h-px bg-blue-600 mr-3"></div>
@@ -150,7 +150,7 @@ export default function AboutSection() {
 
 
           {/* Mission - Bottom Left */}
-          <div className={`absolute bottom-8 left-4 md:bottom-12 md:left-12 max-w-xs md:max-w-sm z-10 ${isVisible ? 'opacity-0 animate-fade-in' : 'opacity-0'}`} style={isVisible ? { animationDelay: '2.2s', animationFillMode: 'forwards' } : {}}>
+          <div className={`absolute bottom-8 left-4 md:bottom-12 md:left-12 max-w-xs md:max-w-sm z-10 ${isVisible ? 'opacity-0 animate-fade-in' : 'opacity-0'}`} style={isVisible ? { animationDelay: '0.5s', animationFillMode: 'forwards' } : {}}>
             <div className="p-4 md:p-6 bg-white rounded-lg shadow-lg border border-blue-100">
               <div className="flex items-center mb-3">
                 <svg className="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
