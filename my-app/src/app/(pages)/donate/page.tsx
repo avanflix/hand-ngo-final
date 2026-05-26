@@ -372,7 +372,7 @@ export default function DonatePage() {
       </section>
 
       {/* Donor Marquee Section */}
-      <DonorMarquee />
+      {/* <DonorMarquee /> */}
 
       <IndiaMapSection />
 
