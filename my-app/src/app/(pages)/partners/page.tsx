@@ -1,6 +1,7 @@
 import FloatingNavbar from '@/components/ui/FloatingNavbar'
 import Footer from '@/components/ui/Footer'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Partners() {
   return (
@@ -57,9 +58,11 @@ export default function Partners() {
                 <p className="mb-6 opacity-90">
                   Let&apos;s discuss how we can collaborate to create meaningful impact in rural India.
                 </p>
-                <button className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Contact Us
-                </button>
+                <Link href="/contact">
+                  <button className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    Contact Us
+                  </button>
+                </Link>
               </div>
             </div>
 

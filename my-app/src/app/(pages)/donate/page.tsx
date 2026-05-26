@@ -128,11 +128,8 @@ function WhyVillagesSection() {
         <h4 className="text-lg font-semibold text-black mb-3">Our Key Areas of Development</h4>
         <div className="space-y-2">
           {[
-            'Education',
             'Livelihood',
-            'Rural Development',
-            'Smart Village',
-            'Skill Development'
+            'Climate Chnage'
           ].map((pillar, index) => (
             <div key={index} className="flex items-center gap-3">
               <div className="w-1.5 h-1.5 bg-blue-600 rounded-full flex-shrink-0"></div>
@@ -145,115 +142,152 @@ function WhyVillagesSection() {
   )
 }
 
-// Donation Form Component
 function DonationForm() {
-  const [amount, setAmount] = useState('')
-  const [customAmount, setCustomAmount] = useState('')
+  const [formData, setFormData] = useState({
+    amount: '',
+    name: '',
+    email: '',
+    phone: '',
+    pan: '',
+    address: ''
+  })
 
   const presetAmounts = ['500', '1000', '2500', '5000']
 
+  const handleChange = (field: string, value: string) => {
+    setFormData((prev) => ({
+      ...prev,
+      [field]: value
+    }))
+  }
+
+  const handleDonate = async () => {
+    if (!formData.amount || !formData.name || !formData.email || !formData.phone) {
+      alert('Please fill all required donor details')
+      return
+    }
+
+    const options = {
+      key: 'YOUR_RAZORPAY_KEY',
+      amount: Number(formData.amount) * 100,
+      currency: 'INR',
+      name: 'HAND Foundation',
+      description: 'Donation Payment',
+      prefill: {
+        name: formData.name,
+        email: formData.email,
+        contact: formData.phone
+      },
+      notes: {
+        pan: formData.pan,
+        address: formData.address
+      },
+      handler: function (response: any) {
+        alert('Payment Successful!')
+        console.log('Payment:', response)
+        console.log('Donor:', formData)
+      },
+      theme: {
+        color: '#2563eb'
+      }
+    }
+
+    const razorpay = new (window as any).Razorpay(options)
+    razorpay.open()
+  }
+
   return (
     <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
-      {/* Header */}
       <div className="text-center mb-8">
         <h3 className="text-2xl font-bold text-black mb-2">Make a Difference Today</h3>
         <p className="text-gray-600">Your donation transforms rural lives</p>
       </div>
 
-      {/* Tax Benefit Badge */}
       <div className="bg-green-50 border border-green-200 rounded-lg p-3 mb-6 text-center">
         <span className="text-green-700 font-semibold text-sm">80G Tax Exempted</span>
       </div>
 
-      {/* Amount Selection */}
-      <div className="mb-8">
-        <label className="block text-sm font-semibold text-black mb-4">Choose Your Impact Amount</label>
+      {/* Amount */}
+      <div className="mb-6">
+        <label className="block text-sm font-semibold text-black mb-4">
+          Choose Donation Amount
+        </label>
+
         <div className="grid grid-cols-2 gap-3 mb-5">
           {presetAmounts.map((presetAmount) => (
             <button
               key={presetAmount}
-              onClick={() => setAmount(presetAmount)}
-              className={`py-3 px-4 rounded-lg border font-semibold transition-all ${amount === presetAmount
-                ? 'border-blue-600 bg-blue-50 text-blue-700'
-                : 'border-gray-300 text-black hover:border-blue-400 bg-white'
-                }`}
+              type="button"
+              onClick={() => handleChange('amount', presetAmount)}
+              className={`py-3 px-4 rounded-lg border font-semibold transition-all ${
+                formData.amount === presetAmount
+                  ? 'border-blue-600 bg-blue-50 text-blue-700'
+                  : 'border-gray-300 text-black hover:border-blue-400 bg-white'
+              }`}
             >
               ₹{presetAmount}
             </button>
           ))}
         </div>
 
-        {/* Custom Amount */}
-        <div className="relative">
-          <input
-            type="text"
-            placeholder="Or enter custom amount"
-            value={customAmount}
-            onChange={(e) => {
-              setCustomAmount(e.target.value)
-              setAmount('')
-            }}
-            className="w-full py-2 px-0 border-0 border-b-2 border-gray-300 focus:border-blue-600 focus:outline-none transition-all bg-transparent"
-          />
-          <span className="absolute right-0 top-1/2 transform -translate-y-1/2 text-gray-500">₹</span>
-        </div>
-      </div>
-
-      {/* Personal Information */}
-      <div className="space-y-6 mb-8">
-        <div>
-          <input
-            type="text"
-            placeholder="Full Name"
-            className="w-full py-2 px-0 border-0 border-b-2 border-gray-300 focus:border-blue-600 focus:outline-none transition-all bg-transparent"
-          />
-        </div>
-        <div>
-          <input
-            type="email"
-            placeholder="Email Address"
-            className="w-full py-2 px-0 border-0 border-b-2 border-gray-300 focus:border-blue-600 focus:outline-none transition-all bg-transparent"
-          />
-        </div>
-        <div>
-          <input
-            type="tel"
-            placeholder="Phone Number"
-            className="w-full py-2 px-0 border-0 border-b-2 border-gray-300 focus:border-blue-600 focus:outline-none transition-all bg-transparent"
-          />
-        </div>
-      </div>
-
-      {/* PAN Card for tax exemption */}
-      <div className="mb-8">
         <input
-          type="text"
-          placeholder="PAN Card Number (for tax exemption)"
-          className="w-full py-2 px-0 border-0 border-b-2 border-gray-300 focus:border-blue-600 focus:outline-none transition-all bg-transparent text-sm"
+          type="number"
+          placeholder="Custom amount"
+          value={formData.amount}
+          onChange={(e) => handleChange('amount', e.target.value)}
+          className="w-full py-2 px-4 border border-gray-300 rounded-lg focus:border-blue-600 focus:outline-none"
         />
       </div>
 
-      {/* Payment Methods */}
-      <div className="mb-8">
-        <div className="text-center">
-          <p className="text-gray-600 text-sm mb-3">We accept</p>
-          <div className="flex justify-center gap-6 text-sm font-medium">
-            <span className="text-black">Credit Card</span>
-            <span className="text-black">UPI</span>
-            <span className="text-black">Net Banking</span>
-          </div>
-          <p className="text-xs text-gray-500 mt-2">Secure payments via external portal</p>
-        </div>
+      {/* Donor Details */}
+      <div className="space-y-4 mb-6">
+        <input
+          type="text"
+          placeholder="Full Name *"
+          value={formData.name}
+          onChange={(e) => handleChange('name', e.target.value)}
+          className="w-full py-3 px-4 border border-gray-300 rounded-lg focus:border-blue-600 focus:outline-none"
+        />
+
+        <input
+          type="email"
+          placeholder="Email Address *"
+          value={formData.email}
+          onChange={(e) => handleChange('email', e.target.value)}
+          className="w-full py-3 px-4 border border-gray-300 rounded-lg focus:border-blue-600 focus:outline-none"
+        />
+
+        <input
+          type="tel"
+          placeholder="Phone Number *"
+          value={formData.phone}
+          onChange={(e) => handleChange('phone', e.target.value)}
+          className="w-full py-3 px-4 border border-gray-300 rounded-lg focus:border-blue-600 focus:outline-none"
+        />
+
+        <input
+          type="text"
+          placeholder="PAN Card Number (Optional)"
+          value={formData.pan}
+          onChange={(e) => handleChange('pan', e.target.value)}
+          className="w-full py-3 px-4 border border-gray-300 rounded-lg focus:border-blue-600 focus:outline-none"
+        />
+
+        <textarea
+          placeholder="Address (Optional)"
+          value={formData.address}
+          onChange={(e) => handleChange('address', e.target.value)}
+          rows={3}
+          className="w-full py-3 px-4 border border-gray-300 rounded-lg focus:border-blue-600 focus:outline-none"
+        />
       </div>
 
-      {/* Donate Button */}
-      <button className="w-full py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+      <button
+        onClick={handleDonate}
+        className="w-full py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+      >
         Donate Now
       </button>
-
-      <p className="text-xs text-gray-500 mt-4 text-center">
-        By donating, you agree to our terms and conditions. All donations are tax-exempted under 80G.
-      </p>
     </div>
   )
 }

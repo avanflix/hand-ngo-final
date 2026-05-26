@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lexend } from "next/font/google";
 import "./globals.css";
+import Script from 'next/script'
 // import { ThemeProvider } from "@/context/ThemeContext";
 
 const lexend = Lexend({
@@ -24,7 +25,8 @@ export default function RootLayout({
       <body
         className={`${lexend.variable} antialiased`}
       >
-                  {children}
+        <Script src="https://checkout.razorpay.com/v1/checkout.js" />
+        {children}
 
       </body>
     </html>

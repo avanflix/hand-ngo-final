@@ -221,6 +221,7 @@ html, body {
   background: hsl(var(--hand-neutral-50));
   color: hsl(var(--hand-neutral-900));
   font-family: 'Lexend', sans-serif;
+  font-size: 14px;   /* reduced global text size */
   margin: 0;
   padding: 0;
   transition: all 0.3s ease;

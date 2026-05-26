@@ -1,8 +1,83 @@
+'use client'
+
 import FloatingNavbar from '@/components/ui/FloatingNavbar'
 import Footer from '@/components/ui/Footer'
 import Image from 'next/image'
+import { useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 export default function Volunteer() {
+  const [showPopup, setShowPopup] = useState(false)
+  const [errors, setErrors] = useState<Record<string, string>>({})
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    city: '',
+    skills: '',
+    availability: '',
+    message: ''
+  })
+
+  const handleChange = (field: string, value: string) => {
+    setFormData((prev) => ({
+      ...prev,
+      [field]: value
+    }))
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+
+    const newErrors: Record<string, string> = {}
+
+    if (!formData.name.trim()) newErrors.name = 'Full name is required'
+    if (!formData.email.trim()) newErrors.email = 'Email is required'
+    if (!formData.phone.trim()) newErrors.phone = 'Phone number is required'
+    if (!formData.city.trim()) newErrors.city = 'City is required'
+    if (!formData.skills.trim()) newErrors.skills = 'Skills are required'
+    if (!formData.availability.trim()) newErrors.availability = 'Availability is required'
+    if (!formData.message.trim()) newErrors.message = 'Message is required'
+
+    setErrors(newErrors)
+
+    if (Object.keys(newErrors).length > 0) return
+
+
+    try {
+      await emailjs.send(
+        'YOUR_SERVICE_ID',
+        'YOUR_TEMPLATE_ID',
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          city: formData.city,
+          skills: formData.skills,
+          availability: formData.availability,
+          message: formData.message
+        },
+        'YOUR_PUBLIC_KEY'
+      )
+
+      alert('Application submitted successfully!')
+      setShowPopup(false)
+
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        city: '',
+        skills: '',
+        availability: '',
+        message: ''
+      })
+    } catch (error) {
+      alert('Failed to send application')
+      console.error(error)
+    }
+  }
   return (
     <div className="w-full">
       <FloatingNavbar />
@@ -57,7 +132,10 @@ export default function Volunteer() {
                 <p className="mb-6 opacity-90">
                   Fill out our volunteer application form and we&apos;ll match you with opportunities that align with your skills and interests.
                 </p>
-                <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                <button
+                  onClick={() => setShowPopup(true)}
+                  className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
                   Apply Now
                 </button>
               </div>
@@ -77,6 +155,151 @@ export default function Volunteer() {
           </div>
         </div>
       </section>
+
+      {showPopup && (
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4"
+          onClick={() => setShowPopup(false)}
+        >
+          <div
+            className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl p-8 relative max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setShowPopup(false)}
+              className="absolute top-4 right-4 text-2xl text-gray-500 hover:text-black"
+            >
+              ×
+            </button>
+
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Volunteer Application
+            </h2>
+
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  value={formData.name}
+                  onChange={(e) => handleChange('name', e.target.value)}
+                  className={`w-full rounded-lg px-4 py-3 border transition-all ${errors.name
+                      ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200'
+                      : 'border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200'
+                    }`}
+                />
+                {errors.name && (
+                  <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+                )}
+              </div>
+
+              <div>
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  value={formData.email}
+                  onChange={(e) => handleChange('email', e.target.value)}
+                  className={`w-full rounded-lg px-4 py-3 border transition-all ${errors.email
+                      ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200'
+                      : 'border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200'
+                    }`}
+                />
+                {errors.email && (
+                  <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                )}
+              </div>
+
+              <div>
+                <input
+                  type="tel"
+                  placeholder="Phone Number"
+                  value={formData.phone}
+                  onChange={(e) => handleChange('phone', e.target.value)}
+                  className={`w-full rounded-lg px-4 py-3 border transition-all ${errors.phone
+                      ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200'
+                      : 'border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200'
+                    }`}
+                />
+                {errors.phone && (
+                  <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+                )}
+              </div>
+
+              <div>
+                <input
+                  type="text"
+                  placeholder="City"
+                  value={formData.city}
+                  onChange={(e) => handleChange('city', e.target.value)}
+                  className={`w-full rounded-lg px-4 py-3 border transition-all ${errors.city
+                      ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200'
+                      : 'border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200'
+                    }`}
+                />
+                {errors.city && (
+                  <p className="text-red-500 text-sm mt-1">{errors.city}</p>
+                )}
+              </div>
+
+              <div>
+                <input
+                  type="text"
+                  placeholder="Skills / Expertise"
+                  value={formData.skills}
+                  onChange={(e) => handleChange('skills', e.target.value)}
+                  className={`w-full rounded-lg px-4 py-3 border transition-all ${errors.skills
+                      ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200'
+                      : 'border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200'
+                    }`}
+                />
+                {errors.skills && (
+                  <p className="text-red-500 text-sm mt-1">{errors.skills}</p>
+                )}
+              </div>
+
+              <div>
+                <select
+                  value={formData.availability}
+                  onChange={(e) => handleChange('availability', e.target.value)}
+                  className={`w-full rounded-lg px-4 py-3 border bg-white transition-all ${errors.availability
+                      ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200'
+                      : 'border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200'
+                    }`}
+                >
+                  <option value="">Select Availability</option>
+                  <option value="Full Time">Full Time</option>
+                  <option value="Part Time">Part Time</option>
+                </select>
+                {errors.availability && (
+                  <p className="text-red-500 text-sm mt-1">{errors.availability}</p>
+                )}
+              </div>
+
+              <div>
+                <textarea
+                  rows={4}
+                  placeholder="Why do you want to volunteer?"
+                  value={formData.message}
+                  onChange={(e) => handleChange('message', e.target.value)}
+                  className={`w-full rounded-lg px-4 py-3 border transition-all ${errors.message
+                      ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200'
+                      : 'border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200'
+                    }`}
+                />
+                {errors.message && (
+                  <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+                )}
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg font-semibold"
+              >
+                Submit Application
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
 
 
 
@@ -126,7 +349,7 @@ export default function Volunteer() {
           </div>
 
           <div className="text-center mt-12">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
+            <button onClick={() => setShowPopup(true)} className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
               Start Your Application
             </button>
           </div>
