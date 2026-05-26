@@ -196,9 +196,9 @@ export default function TeamSection() {
 
         {/* Content */}
         <div className="p-2 md:p-3">
-          <p className="text-gray-700 leading-relaxed text-xs mb-2 text-center">
+          {/* <p className="text-gray-700 leading-relaxed text-xs mb-2 text-center">
             {member.bio}
-          </p>
+          </p> */}
           <div className="flex justify-center space-x-2">
             <a
               href={member.linkedin}
