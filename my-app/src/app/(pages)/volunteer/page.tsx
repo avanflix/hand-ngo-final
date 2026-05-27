@@ -4,10 +4,10 @@ import FloatingNavbar from '@/components/ui/FloatingNavbar'
 import Footer from '@/components/ui/Footer'
 import Image from 'next/image'
 import { useState } from 'react'
-import emailjs from '@emailjs/browser'
 
 export default function Volunteer() {
   const [showPopup, setShowPopup] = useState(false)
+  const [showSuccess, setShowSuccess] = useState(false)
   const [errors, setErrors] = useState<Record<string, string>>({})
 
   const [formData, setFormData] = useState({
@@ -44,25 +44,23 @@ export default function Volunteer() {
 
     if (Object.keys(newErrors).length > 0) return
 
-
     try {
-      await emailjs.send(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          phone: formData.phone,
-          city: formData.city,
-          skills: formData.skills,
-          availability: formData.availability,
-          message: formData.message
+      const res = await fetch('/api/volunteer', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
         },
-        'YOUR_PUBLIC_KEY'
-      )
+        body: JSON.stringify(formData)
+      })
 
-      alert('Application submitted successfully!')
+      const data = await res.json()
+
+      if (!res.ok) {
+        throw new Error(data.message)
+      }
+
       setShowPopup(false)
+      setShowSuccess(true)
 
       setFormData({
         name: '',
@@ -73,9 +71,13 @@ export default function Volunteer() {
         availability: '',
         message: ''
       })
+
+      setTimeout(() => {
+        setShowSuccess(false)
+      }, 1000)
     } catch (error) {
-      alert('Failed to send application')
       console.error(error)
+      alert('Failed to submit application')
     }
   }
   return (
@@ -183,8 +185,8 @@ export default function Volunteer() {
                   value={formData.name}
                   onChange={(e) => handleChange('name', e.target.value)}
                   className={`w-full rounded-lg px-4 py-3 border transition-all ${errors.name
-                      ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200'
-                      : 'border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200'
+                    ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200'
+                    : 'border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200'
                     }`}
                 />
                 {errors.name && (
@@ -199,8 +201,8 @@ export default function Volunteer() {
                   value={formData.email}
                   onChange={(e) => handleChange('email', e.target.value)}
                   className={`w-full rounded-lg px-4 py-3 border transition-all ${errors.email
-                      ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200'
-                      : 'border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200'
+                    ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200'
+                    : 'border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200'
                     }`}
                 />
                 {errors.email && (
@@ -215,8 +217,8 @@ export default function Volunteer() {
                   value={formData.phone}
                   onChange={(e) => handleChange('phone', e.target.value)}
                   className={`w-full rounded-lg px-4 py-3 border transition-all ${errors.phone
-                      ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200'
-                      : 'border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200'
+                    ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200'
+                    : 'border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200'
                     }`}
                 />
                 {errors.phone && (
@@ -231,8 +233,8 @@ export default function Volunteer() {
                   value={formData.city}
                   onChange={(e) => handleChange('city', e.target.value)}
                   className={`w-full rounded-lg px-4 py-3 border transition-all ${errors.city
-                      ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200'
-                      : 'border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200'
+                    ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200'
+                    : 'border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200'
                     }`}
                 />
                 {errors.city && (
@@ -247,8 +249,8 @@ export default function Volunteer() {
                   value={formData.skills}
                   onChange={(e) => handleChange('skills', e.target.value)}
                   className={`w-full rounded-lg px-4 py-3 border transition-all ${errors.skills
-                      ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200'
-                      : 'border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200'
+                    ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200'
+                    : 'border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200'
                     }`}
                 />
                 {errors.skills && (
@@ -261,8 +263,8 @@ export default function Volunteer() {
                   value={formData.availability}
                   onChange={(e) => handleChange('availability', e.target.value)}
                   className={`w-full rounded-lg px-4 py-3 border bg-white transition-all ${errors.availability
-                      ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200'
-                      : 'border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200'
+                    ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200'
+                    : 'border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200'
                     }`}
                 >
                   <option value="">Select Availability</option>
@@ -281,8 +283,8 @@ export default function Volunteer() {
                   value={formData.message}
                   onChange={(e) => handleChange('message', e.target.value)}
                   className={`w-full rounded-lg px-4 py-3 border transition-all ${errors.message
-                      ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200'
-                      : 'border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200'
+                    ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200'
+                    : 'border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200'
                     }`}
                 />
                 {errors.message && (
@@ -297,6 +299,37 @@ export default function Volunteer() {
                 Submit Application
               </button>
             </form>
+          </div>
+        </div>
+      )}
+
+      {showSuccess && (
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/40 backdrop-blur-sm">
+          <div className="bg-white rounded-3xl shadow-2xl px-10 py-8 text-center animate-in zoom-in duration-300 max-w-md mx-4">
+
+            <div className="w-20 h-20 mx-auto mb-5 rounded-full bg-green-100 flex items-center justify-center">
+              <svg
+                className="w-10 h-10 text-green-600"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="3"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </div>
+
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">
+              Success!
+            </h3>
+
+            <p className="text-gray-600 text-lg">
+              Application submitted successfully
+            </p>
           </div>
         </div>
       )}
