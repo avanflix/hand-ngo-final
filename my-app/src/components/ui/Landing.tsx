@@ -9,7 +9,7 @@ export default function LandingSection() {
 
   const carouselSlides = [
     {
-      src: '/livelihood/3.jpg',
+      src: '/livelihood/3.jpeg',
       alt: 'Livelihood Programs - HAND',
       // title: 'Livelihood',
       // tagline: 'Sustainable livelihoods',
