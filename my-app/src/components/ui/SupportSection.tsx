@@ -25,7 +25,7 @@ export default function SupportSection() {
       title: 'LIVELIHOOD',
       subtitle: 'Empower Sustainable Income',
       description: 'Create sustainable income opportunities for women and youth through micro-enterprise support, handicrafts, and vocational training.',
-      image: '/livelihood/3.jpg',
+      image: '/livelihood/3.jpeg',
       color: 'blue'
     },
     // {
