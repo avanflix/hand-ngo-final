@@ -174,32 +174,39 @@ export default function DomainLayout(props: DomainLayoutProps) {
             <p className="text-base md:text-lg text-gray-700  pb-12 leading-relaxed">
               {props.whatWeDoDescription}
             </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {props.overviewCards.map((card) => (
-                <div key={card.id} className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow group flex flex-col h-full">
-                  <div className="relative h-56 overflow-hidden flex-shrink-0">
+            <div className="space-y-16">
+              {props.overviewCards.map((card, index) => (
+                <div
+                  key={card.id}
+                  className={`grid lg:grid-cols-2 gap-10 items-center ${index % 2 !== 0 ? "lg:[&>*:first-child]:order-2" : ""
+                    }`}
+                >
+                  {/* Smaller Image */}
+                  <div className="relative h-[250px] md:h-[300px] rounded-2xl overflow-hidden">
                     <Image
                       src={card.image}
                       alt={card.title}
                       fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="object-cover"
                     />
                   </div>
-                  <div className="p-8 flex flex-col flex-grow">
-                    <h3 className="text-xl text-black mb-3 font-heading font-semibold">{card.title}</h3>
-                    <p className="text-gray-700 leading-relaxed mb-4 flex-grow">{card.description}</p>
+
+                  {/* Content */}
+                  <div>
+                    <h3 className="text-3xl font-heading font-bold text-gray-900 mb-4">
+                      {card.title}
+                    </h3>
+
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      {card.description}
+                    </p>
 
                     {card.fullDescription && (
-                      <button
-                        onClick={() => setSelectedCard(card)}
-                        className="self-start text-blue-600 font-medium hover:text-blue-700 hover:underline inline-flex items-center gap-1 mt-auto"
-                      >
-                        Read More
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                        </svg>
-                      </button>
+                      <div className="border-l-4 border-blue-600 pl-5 mt-4">
+                        <p className="text-gray-600 leading-relaxed">
+                          {card.fullDescription}
+                        </p>
+                      </div>
                     )}
                   </div>
                 </div>
